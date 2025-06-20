@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  color: #5f3a3a;
+  overflow-x: hidden;
+}
+
+/* Musik Toggle */
+button.music-toggle {
+  button.music-toggle.music-off {
+  background: #ffd1d1;
+  color: #a94442;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+}
+
+button.music-toggle.music-off:hover {
+  background: #ffc4c4;
+}
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: #fbd6dc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Teks Romantis Berjalan */
+.romantic-message {
+  width: 100%;
+  overflow: hidden;
+  background: #fbd6dc;
+  white-space: nowrap;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.romantic-message p {
+  display: inline-block;
+  padding: 1rem 2rem;
+  animation: scrollText 15s linear infinite;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #a94462;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Header */
+/* Header modern */
+.header-modern {
+  background: linear-gradient(145deg, #ffe7ec, #fff5f7);
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-modern .quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #b3526e;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.header-modern .title-group {
+  display: inline-block;
+  background: #fff0f5;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  animation: slideUp 1.2s ease-out;
+}
+
+.header-modern h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5a2c2c;
+}
+
+.header-modern p {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  color: #85474b;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Video */
+.video-section {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.video-decor {
+  position: absolute;
+  width: 300px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.bunga-kiri {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-15deg);
+}
+
+.bunga-kanan {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(20deg);
+}
+
+.video-section video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Galeri */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.photo-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding: 1rem;
+}
+
+.photo-slider img {
+  height: 180px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo-slider img:hover {
+  transform: scale(1.05);
+}
+* {
+  transition: all 0.3s ease-in-out;
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  padding: 0.5rem;
+  background: #fbd6dc;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fce0d9;
+  font-size: 0.9rem;
+  color: #7a4c4c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* RESPONSIVE SETTINGS */
+@media (max-width: 768px) {
+  .header-modern h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-modern .title-group {
+    padding: 1rem;
+  }
+
+  .romantic-message p {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .video-section video {
+    width: 100%;
+  }
+
+  .photo-slider {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .photo-slider img {
+    height: 140px;
+  }
+
+  button.music-toggle {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  #scrollTopBtn {
+    font-size: 1rem;
+    bottom: 70px;
+  }
+
+  .header-modern p,
+  .header-modern .quote {
+    font-size: 0.95rem;
+  }
+}
+.video-section video {
+  width: 90%;
+  max-width: 600px;
+}
+* {
+  box-sizing: border-box;
+}
